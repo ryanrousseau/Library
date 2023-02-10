@@ -14,7 +14,7 @@ on:
 jobs:
   deployment:
     runs-on: ubuntu-latest
-    environment: "${{ github.ref }}"
+    environment: "refs/heads/feature_a"
     steps:
       - name: deploy
         run: echo "$TENANT"
