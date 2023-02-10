@@ -23,6 +23,6 @@ jobs:
     needs: build
     steps:
       - name: deploy
-        run: echo "${{ TENANT }}"
+        run: echo "${{ env.TENANT }}"
       - name: deploy 2
         run: echo "${{ github.ref }}"
