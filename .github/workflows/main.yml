@@ -18,4 +18,4 @@ jobs:
       name: "${{ github.ref }}"
     steps:
       - name: deploy
-        run: echo "${{ TENANT }}"
+        run: echo "$TENANT"
