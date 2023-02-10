@@ -12,17 +12,9 @@ on:
   workflow_dispatch:
   
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: deploy 2
-        run: echo "${{ github.ref }}"
   deployment:
     runs-on: ubuntu-latest
     environment: "${{ github.ref }}"
-    needs: build
     steps:
       - name: deploy
         run: echo "${{ vars.TENANT }}"
-      - name: deploy 2
-        run: echo "${{ github.ref }}"
